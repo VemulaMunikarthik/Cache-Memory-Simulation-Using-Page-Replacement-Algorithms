@@ -1,0 +1,35 @@
+<html>
+<style>
+    body {
+            /* Specify the background image and set properties */
+            background: url('static/imgos.jpg') center/cover no-repeat fixed;
+            /* Additional styles for the body */
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+    }
+    video{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #idone{
+        font-size: 30px;
+        font-family: 'Arial', sans-serif;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        padding-top: 2px;
+    }
+</style>
+<body>
+    <video width="900" height="700" controls>
+        {{ytname}}
+        <source src='/static/{{ytname}}' type="video/mp4">
+    </video><br>
+    <p id="idone">This video took {{elapsed}} of time to load</p>
+</body>
+</html>

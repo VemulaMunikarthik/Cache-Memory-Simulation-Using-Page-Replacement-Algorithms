@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Caching</title>
+    <style>
+        body {
+            /* Specify the background image and set properties */
+            background: url('static/imgos.jpg') center/cover no-repeat fixed;
+            /* Additional styles for the body */
+            margin: 0;
+            height: 100vh;
+            overflow: hidden; /* Prevents vertical scrollbar */
+        }
+        #id1{
+            color: white;
+            font-size: 30px;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            justify-content: center;
+            padding-top: 225px;
+        }
+        #labelid{
+            color: white;
+            font-size: 30px;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 500px;
+            margin-top: 500px;
+            padding-left: 523px;
+        }
+        #inputid{
+            font-size: 25px;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5px;
+            border: 3px solid black;
+            width: 200px;
+            padding-top: 10px;
+            margin-top: 4px;
+            padding-left: 5px;
+            border-radius: 20px;
+            height: 15px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            background: url('static/searchsym.png') no-repeat 5px center; /* Set the search icon as a background image */
+            background-size: 20px 20px;
+            background-color: white;
+        }
+        #dropdown{
+            color: white;
+            font-size: 30px;
+            font-family: 'Arial', sans-serif;
+            /*text-align: center;*/
+            margin-top: 30px;
+            display: flex;
+            margin-left: 43%;
+            /*justify-content: center;*/
+        }
+        .sel{
+            /*text-align: center;*/
+            display: block;
+            /*justify-content: center;*/
+            margin:auto;
+            height: 40px;
+            width: 100px;
+            border-radius: 15px;
+            margin-top: 30px;
+            font-size: 20px;
+            font-family: 'Arial', sans-serif;
+            border: 3px solid black;
+        }
+
+        #submitButton{
+            display: block;
+            margin: auto;
+            margin-top: 8px;
+            height: 40px;
+            border-radius: 20px;
+            border-color: black;
+            border-width: 5px;
+            font-size: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p id="id1">Video Caching Example</p>
+    <form method="POST" action="/">
+        <label id="labelid" for="userinput">Enter Video Caption: </label>
+        <input id="inputid" type="text" name="userinput" placeholder="Type Here..."></input>
+        <label id="dropdown">Choose Algorithm</label>
+        <div class="cls">
+        <select class="sel" name="sct">
+            <option value="">--Slect--</option>
+            <Option value="lru">LRU</Option>
+            <option value="fifo">FIFO</option>
+        </select><br>
+        <input type="submit" id="submitButton" value="Search">
+        </div>
+    </form>
+</body>
+</html>
